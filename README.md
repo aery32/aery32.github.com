@@ -1,4 +1,3 @@
-aery32.github.com
+[devzone.aery32.com](http://devzone.aery32.com)
 =================
 
-Blog
