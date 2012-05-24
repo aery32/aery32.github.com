@@ -1,0 +1,12 @@
+title: Aery32 devzone
+url: http://devzone.aery32.com
+
+markdown: rdiscount
+pygments: true
+permalink: /:year/:month/:title
+
+lsi: true
+paginate: 20
+
+exclude:
+- CNAME
