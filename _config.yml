@@ -10,3 +10,4 @@ paginate: 20
 
 exclude:
 - CNAME
+- .gitignore

@@ -11,32 +11,16 @@ description: Aery32 devzone is a community site for Aery32 development and proje
 		<h1>Welcome to Aery32 devzone</h1>
 		<p>Aery32 community site will be opened here ASAP. Below you can see ideas for the topics we have planned to write about. You are also welcome to writing articles and cast ideas! Check it again in two weeks or be in touch via GitHub.</p>
 	</div>
-	<div class="row">
-		<div class="span3">
-			<h2>LUFA integrated with Aery32 project</h2>
-			<p style="height: 150px">...</p>
+	<div class="post-tiles hfeed">
+		<div class="row">
+			{% for post in site.posts offset: 0 limit: 3 %}
+				{% include post-tile.html %}
+			{% endfor %}
 		</div>
-		<div class="span3">
-			<h2>Using HD44780 type two row OLED display via SPI bus</h2>
-			<p>...</p>
-		</div>
-		<div class="span3">
-			<h2>Upgrading UC3A1 bootloader to 1.0.3</h2>
-			<p>...</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="span3">
-			<h2>Heading</h2>
-			<p>...</p>
-		</div>
-		<div class="span3">
-			<h2>Heading</h2>
-			<p>...</p>
-		</div>
-		<div class="span3">
-			<h2>Heading</h2>
-			<p>...</p>
+		<div class="row">
+			{% for post in site.posts offset: 3 limit: 3 %}
+				{% include post-tile.html %}
+			{% endfor %}
 		</div>
 	</div>
 </div>

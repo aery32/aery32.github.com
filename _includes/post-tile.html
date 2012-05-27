@@ -1,0 +1,14 @@
+<div class="span3 hentry post-tile">
+	<h2><a class="entry-title" href="{{ site.url }}{{ post.url }}"
+		rel="bookmark">{{ post.title }}</a></h2>
+
+	<address class="vcard author pull-left"><span class="fn">
+		{{ post.author }}</span></address>
+
+	<abbr class="published updated pull-right"
+		title="{{ post.date | date_to_xmlschema }}">
+		{{ post.date | date_to_string }}</abbr>
+
+	<div style="clear: both"></div>
+	<p>{{ post.summary }} <b>...</b></p>
+</div>

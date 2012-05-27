@@ -1,3 +1,19 @@
-h2 { font-size: 16px; line-height: 20px; margin: 0 0 9px; }
-
 .hero-unit h1 { font-size: 42px; margin-bottom: 15px; }
+
+.post-tile h2 {
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0;
+}
+.post-tile abbr, .post-tile address {
+
+	margin: 2px 0 0 0;
+	font-size: 11px;
+}
+.post-tile abbr {
+	font-style: italic;
+}
+.post-tile p {
+	margin-top: 10px;
+	text-align: justify;
+}
