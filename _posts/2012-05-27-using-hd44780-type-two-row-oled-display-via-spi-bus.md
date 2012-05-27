@@ -102,7 +102,7 @@ void display_wrbyte(uint8_t byte)
 } 
 </pre>
 
-If you were wondering, the transmitted byte is bitwise OR'd to set RS and R/W bits appropriately. But the cool thing, is that we can now write to the display like this
+If you were wondering, the transmitted byte is bitwise OR'd to set RS and R/W bits appropriately. But the cool thing here is that we can now write to the display like this
 
 <pre class="prettyprint lang-c">
 display_puts("Hello Aery32 devs!");
