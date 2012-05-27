@@ -1,4 +1,7 @@
-.hero-unit h1 { font-size: 42px; margin-bottom: 15px; }
+.hero-unit h1 {
+	font-size: 42px;
+	margin-bottom: 15px;
+}
 
 .post-tile h2 {
 	font-size: 16px;
@@ -16,4 +19,22 @@
 .post-tile p {
 	margin-top: 10px;
 	text-align: justify;
+}
+
+.post-article footer {
+	background-color: #F8F8F8;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+.post-article addr, .post-article address {
+	display: inline;
+}
+.post-socials {
+	margin: 10px 0;
+}
+
+.entry-tags {
+	margin-top: 10px;
 }
