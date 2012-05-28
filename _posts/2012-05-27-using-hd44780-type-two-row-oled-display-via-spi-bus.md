@@ -19,9 +19,9 @@ tweet-text: "Using HD44780 type two row OLED display with #Aery32 Software Frame
 summary: "In this article it's quickly described how to connect OLED display to Aery32 devboard using serial peripheral interface bus (SPI). Only 6 pieces of jumper wires are needed, 4 for the SPI bus and 2 for the power (3.3V and GND)"
 ---
 
-In this article I will quickly described how to connect OLED display to Aery32 devboard using serial peripheral interface bus (SPI). Only 6 pieces of jumper wires are needed, 4 for the SPI bus and 2 for the power (3.3V and GND). For an OLED display I chose NHD‐0220DZW‐AG5 OLED Display Module (2 lines x 20 characters) with Hitachi HD44780 LCD controller. The selection criterion was that [HD44780 display controllers](http://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller) are very common and that the display was working at 3.3V supply voltage.
+In this article I will quickly describe how to connect OLED display to Aery32 devboard using serial peripheral interface bus (SPI). Only 6 pieces of jumper wires are needed, 4 for the SPI bus and 2 for the power (3.3V and GND). For the display module I chose NHD‐0220DZW‐AG5 (2 lines x 20 characters) that has Hitachi HD44780 LCD controller. The selection criterion was that [HD44780 display controllers](http://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller) are very common and that the display was working at 3.3V supply voltage.
 
-By default NHD‐0220DZW‐AG5 MPU interface is set to work in parallel mode, so I had to change the jumper setting at the bottom side of the display module to enable SPI interface. Hereby, I removed the jumper resistors marked with red rectangles and changed the position of the H_PS_L jumper to the postion marked by orange ractangle. Afterwards I noticed that jumper J68 would not have to be removed, so you can spare your soldering iron for that.
+By default NHD‐0220DZW‐AG5 MPU interface is set to work in parallel mode, so I had to change the jumper setting at the bottom side of the display module to enable SPI interface. Hereby, I removed the jumper resistors marked with red rectangles and changed the position of the H_PS_L jumper to the position marked by orange ractangle. Afterwards I noticed that jumper J68 would not have to be removed, so you can spare your soldering iron for that.
 
 ![NHD‐0220DZW‐AG5 jumper selection for SPI](/images/nhd-0220dzw-bottom-serial-selection.png "NHD‐0220DZW‐AG5 jumper selection for SPI")
 
@@ -40,7 +40,7 @@ First SPI bus has to be initialized, so let's include [SPI module](http://aery32
 #include "board.h"
 </pre>
 
- I have chosen to connect the display to the SPI0 with NPCS0 (slave select 0), so I have to initialize those GPIO pins before initializing SPI0 itself. The SPI pins are PA10, 11, 12 and 13, that has to be assinged to peripheral function A. This I checked from [UC3A1's datasheet](http://www.atmel.com/Images/doc32058.pdf) page 45.
+I have chosen to connect the display to the SPI0 with NPCS0 (slave select 0), so I have to initialize those GPIO pins before initializing SPI0 itself. The SPI pins are PA10, 11, 12 and 13, that has to be assinged to peripheral function A. This I checked from the [UC3A1's datasheet](http://www.atmel.com/Images/doc32058.pdf) page 45.
 
 <pre class="prettyprint lang-c">
 #define LED                 AVR32_PIN_PC04
@@ -67,10 +67,10 @@ aery_spi_setup_npcs(DISPLAY_SPI, DISPLAY_SPI_NPCS, DISPLAY_SPI_MODE, 10);
 aery_spi_enable(DISPLAY_SPI);
 </pre>
 
-Put strings to the display
---------------------------
+Show strings on the display
+---------------------------
 
-I would like to write to the display with `puts()` like function, so let's make that
+I would like to write to the display with `puts()` like function, so let's make a function for that
 
 <pre class="prettyprint lang-c">
 int display_puts(const char *buf)
@@ -84,7 +84,7 @@ int display_puts(const char *buf)
 }
 </pre>
 
-That was easy, but it needs `display_putc()` function that we do not have yet. So how do we write characters to the display? Yes, by writing bytes to the SPI bus
+That was easy, but it needs `display_putc()` function that we do not have yet. How do we write characters to the display? Yes, by writing bytes to the SPI bus that is connected to the display.
 
 <pre class="prettyprint lang-c">
 void display_putc(char c)
@@ -93,7 +93,7 @@ void display_putc(char c)
 }
 </pre>
 
-Ok, that includes another function we do not have yet, but don't worry that's easy too :) This is the point where Aery32 Software Framework comes in help.
+Ok, that includes another undeclared function, but don't worry that's easy too :) At this point Aery32 Software Framework comes in help.
 
 <pre class="prettyprint lang-c">
 void display_wrbyte(uint8_t byte)
