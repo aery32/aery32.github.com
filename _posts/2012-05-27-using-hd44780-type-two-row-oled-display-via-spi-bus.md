@@ -27,6 +27,33 @@ By default NHD‐0220DZW‐AG5 MPU interface is set to work in parallel mode, so
 
 ![NHD‐0220DZW‐AG5 jumper selection for SPI](/images/nhd-0220dzw-bottom-serial-selection.png "NHD‐0220DZW‐AG5 jumper selection for SPI")
 
+<table>
+	<caption>Connections table</caption>
+	<thead>
+		<tr>
+			<th>Aery32</th>
+			<th>Dipslay module</th>
+		</tr>
+	</thead>
+	<tr>
+		<td>PA10, CS</td>
+		<td>PIN16</td>
+	</tr>
+	<tr>
+		<td>PA11, MISO</td>
+		<td>PIN13</td>
+	</tr>
+	<tr>
+		<td>PA12, MOSI</td>
+		<td>PIN14</td>
+	</tr>
+	<tr>
+		<td>PA13, SCK</td>
+		<td>PIN12</td>
+	</tr>
+</table>
+
+
 Initialize the SPI bus
 ----------------------
 

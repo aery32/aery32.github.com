@@ -21,6 +21,9 @@
 	text-align: justify;
 }
 
+.post-article h2 {
+	margin: 20px 0 5px;
+}
 .post-article footer {
 	background-color: #F8F8F8;
 	border-top: 1px solid #DDD;
@@ -31,6 +34,14 @@
 .post-article addr, .post-article address {
 	display: inline;
 }
+.entry-tags {
+	margin-top: 10px;
+}
+
+.post-socials {
+	margin: 10px 0;
+}
+
 .post-article img.pull-right {
 	margin: 0 0 20px 20px;
 }
@@ -38,10 +49,16 @@
 	margin: 0 20px 20px 0;
 }
 
-.post-socials {
-	margin: 10px 0;
+.post-article table {
+	width: 100%;
 }
-
-.entry-tags {
-	margin-top: 10px;
+.post-article caption {
+	font-size: 1.2em;
+}
+.post-article thead {
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #444;
+}
+.post-article tbody td {
+	text-align: center;
 }
