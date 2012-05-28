@@ -34,7 +34,7 @@ Seems like I have the latest standalone version that's 3.3.2 at the moment of wr
 
 Go back to the command line and reset the PATH so that it overrides the current version of the AVR Toolchain. That's prepending the PATH variable with the installation dir that includes the new version of the toolchain binaries
 
-    set PATH=C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain;%PATH%
+    set PATH=C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin;%PATH%
 
  ![AVR Toolchain version 3.4.0](/images/avr_toolchain_3_4_0.png "AVR Toolchain version 3.4.0")
 
