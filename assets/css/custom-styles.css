@@ -31,6 +31,13 @@
 .post-article addr, .post-article address {
 	display: inline;
 }
+.post-article img.pull-right {
+	margin: 0 0 20px 20px;
+}
+.post-article img.pull-left {
+	margin: 0 20px 20px 0;
+}
+
 .post-socials {
 	margin: 10px 0;
 }
