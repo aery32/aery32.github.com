@@ -18,7 +18,7 @@ tweet-text: "Go ahead with AVR Toolchain version 3.4.0 via @aery32devzone"
 summary: "Atmel released a new version of its AVR Toolchain (3.4.0) with AVR Studio 6 a week or two ago. However, the standalone installer of this toolchain has not been released yet. This post shows how to go ahead with the new version that is included in Studio 6"
 ---
 
-Atmel released a new version of its AVR Toolchain (3.4.0) with AVR Studio 6 a week or two ago. However, the standalone installer of this toolchain has not been released yet. This post shows how to go ahead with the new version that is included in the Studio 6. For the curiosity, let's check what version of the toolchain we have already installed. This can be done via command line. I guess that you are on Windows, so press Win-R and type `cmd`, then press enter.
+Atmel released a new version of its AVR Toolchain (3.4.0) with AVR Studio 6 a week or two ago. However, the standalone installer of this toolchain has not been released yet. This post shows how to go ahead with the new version that is included in the Studio 6. For the curiosity, let's check what version of the toolchain we have already installed. This can be done via command line. Assuming that you are on Windows, press Win-R and type `cmd`, then press enter.
 
 <span class="label label-info">Heads up!</span> Unfortunaltely, Linux users have to wait standalone package, because Studio 6 is only for Windows.
 
@@ -30,9 +30,9 @@ so you should see something similar
 
 ![Checking the AVR Toolchain version](/images/avr_toolchain_what_version.png "Checking the AVR Toolchain version")
 
-Seems like I have the latest standalone version that's 3.3.2 at the moment of writing. Now let's update this to the newer version, so download and install [AVR Studio 6](http://www.atmel.com/tools/atmelstudio.aspx). If you installed it into the default folder, you can find the toolchain from the `C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain`. 
+Seems like I have the latest standalone version that's 3.3.2 at the moment of writing. Now let's update this to the latest version, so download and install [AVR Studio 6](http://www.atmel.com/tools/atmelstudio.aspx). If you installed it into the default folder, you can find the toolchain from the `C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain`. 
 
-Go back to the command line and reset the PATH so that it overrides the current version of the AVR Toolchain. That's prepending the PATH variable with the installation dir that includes the new version of the toolchain binaries
+Go back to the command line and reset the PATH so that it overrides the current version (3.3.2) of the AVR Toolchain. That's prepending the PATH variable with the installation dir that includes the binaries of the latest toolchain version
 
     set PATH=C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin;%PATH%
 
