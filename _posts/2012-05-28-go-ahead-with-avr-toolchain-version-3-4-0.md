@@ -6,7 +6,7 @@ author: Kim Blomqvist
 author-email:
 
 tags:
-- "AVR Toolchain"
+- "avr toolchain"
 
 categories:
 - article
