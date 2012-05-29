@@ -1,0 +1,31 @@
+---
+layout: default
+title: Archive
+description: All entries posted in Aery32 DevZone
+---
+
+<div class="container">
+<div class="row">
+	<div class="span6">
+		<h1>Archive</h1>
+		<ul class="posts-list hfeed">
+		{% for post in paginator.posts %}
+		{% include post-list-item.html %}
+		{% endfor %}
+		</ul>
+	</div>
+
+	{% if site.tags.size > 0 %}
+	<div class="span3">
+		<div class="well sidebar-nav">
+			<ul class="nav nav-list">
+				<li class="nav-header">Posts' tag list</li>
+				{% for tag in site.tags %}
+				<li><a href="/tag#{{ tag[0] }}">{{ tag[0] }} ({{ tag[1].size }})</a> </li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	{% endif %}
+</div>
+</div>
