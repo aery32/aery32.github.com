@@ -38,7 +38,7 @@ Go back to the command line and reset the PATH so that it overrides the current 
 
  ![AVR Toolchain version 3.4.0](/images/avr_toolchain_3_4_0.png "AVR Toolchain version 3.4.0")
 
- If you recheck the toolchain version now, you can see that it's updated to 3.4.0. The drawback with this method is that you have to always remember to reset the PATH or otherwise you are using the old version of the toolchain. Thus open the *Control Panel &raquo; System and Security &raquo; System*, then select *Advanced system settings*. From the window shown below press *Environment Variables...*. Then you can change the PATH variable in the way that's persistent.
+ If you recheck the toolchain version now, you can see that it's updated to 3.4.0. The drawback with this method is that you have to always remember to reset the PATH or otherwise the old version of the toolchain is reverted. Thus open the *Control Panel &raquo; System and Security &raquo; System*, then select *Advanced system settings*. From the window shown below press *Environment Variables...*. Then you can change the PATH variable in the way that's persistent.
 
 ![System Properties window in Windows 7](/images/win7_system_properties.png "System Properties window in Windows 7")
 
