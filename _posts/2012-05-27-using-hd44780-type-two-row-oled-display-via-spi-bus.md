@@ -69,7 +69,7 @@ First SPI bus has to be initialized, so let's include [SPI module](http://aery32
 #include "board.h"
 </pre>
 
-I have chosen to connect the display to the SPI0 with NPCS0 (slave select 0), so I have to initialize those GPIO pins before initializing SPI0 itself. The SPI pins are PA10, 11, 12 and 13, that has to be assinged to peripheral function A. This I checked from the [UC3A1's datasheet](http://www.atmel.com/Images/doc32058.pdf) page 45.
+I have chosen to connect the display to the SPI0 with NPCS0 (slave select 0), so I have to initialize those GPIO pins before initializing SPI0 itself. The SPI pins are PA10, 11, 12 and 13, that have to be assinged to peripheral function A. This I checked from the [UC3A1's datasheet](http://www.atmel.com/Images/doc32058.pdf) page 45.
 
 <pre class="prettyprint lang-c">
 #define LED                 AVR32_PIN_PC04
