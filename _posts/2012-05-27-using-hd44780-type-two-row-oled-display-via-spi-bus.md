@@ -14,7 +14,7 @@ categories:
 
 level: beginner
 
-tweet-text: "Using HD44780 type two row OLED display with #Aery32 Software Framework via @aery32devzone"
+tweet-text: "Using HD44780 type two row OLED display with #Aery32 Software Framework #aery32devzone"
 
 summary: "In this article it's quickly described how to connect OLED display to Aery32 devboard using serial peripheral interface bus (SPI). Only 6 pieces of jumper wires are needed, 4 for the SPI bus and 2 for the power (3.3V and GND)"
 ---
