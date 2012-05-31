@@ -13,7 +13,7 @@ categories:
 
 level: advanced
 
-tweet-text: "Go ahead with AVR Toolchain version 3.4.0 via @aery32devzone"
+tweet-text: "Go ahead with AVR Toolchain version 3.4.0 #aery32devzone"
 
 summary: "Atmel released a new version of its AVR Toolchain (3.4.0) with AVR Studio 6 a week or two ago. However, the standalone installer of this toolchain has not been released yet. This post shows how to go ahead with the new version that is included in Studio 6"
 ---
