@@ -12,6 +12,7 @@ exclude:
 - CNAME
 - .gitignore
 
+# Navigation
 urls:
 - ['Home', '/']
 - ['Archive', '/archive']

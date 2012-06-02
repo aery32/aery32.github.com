@@ -8,13 +8,18 @@
 
 	<div class="nav-collapse">
 		<ul class="nav">
-			{% for url in site.urls %}
 			{% capture pageurl %}
 				{{ page.url | remove:".html" | remove: "/index" }}
 			{% endcapture %}
-			<li {% if pageurl == url[1] %}class="active"{% endif %}>
-				<a href="{{ url[1] }}">{{ url[0] }}</a>
-			</li>
+
+			{% if pageurl == "" %}
+				{% assign pageurl = "/" %}
+			{% endif %}
+
+			{% for url in site.urls %}
+				<li {% if pageurl == url[1] %}class="active"{% endif %}>
+					<a href="{{ url[1] }}">{{ url[0] }}</a>
+				</li>
 			{% endfor %}
 		</ul>
 	</div>
