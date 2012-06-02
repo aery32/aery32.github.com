@@ -14,4 +14,4 @@ exclude:
 
 urls:
 - ['Home', '/']
-- ['Archive', '/archive']
+- ['Archive', '/archive/']
