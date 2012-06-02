@@ -4,9 +4,9 @@ title: Posts' tags list
 description:
 ---
 
-
 <div class="container">
 <div class="row">
+
 	<div class="span6">	
 	{% for tag in site.tags %}
 		<h1 name="#{{ tag[0] }}">{{ tag[0] }}</h1>
@@ -17,5 +17,6 @@ description:
 		</ul>
 	{% endfor %}
 	</div>
+	
 </div>
 </div>
