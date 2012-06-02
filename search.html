@@ -1,0 +1,29 @@
+---
+layout: default
+title: "Search for the datasheet of electronic parts"
+description: "Google Custom Search engine for the datasheet of electronic parts, application and design notes"
+---
+
+<div class="container">
+<div class="row">
+
+<div class="span9">
+	<h1>Search</h1>
+	<p>With this Google Custom Search engine you can easily find datasheets and electronics reference guides all over the internet</p>
+
+	<div id="cse" style="width: 100%;">Loading</div>
+	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+	<script type="text/javascript"> 
+	  google.load('search', '1', {language : 'en', style : google.loader.themes.V2_DEFAULT});
+	  google.setOnLoadCallback(function() {
+	    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+	      '003391026657812352908:indvxbqrn4e', customSearchOptions);
+	    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+	    customSearchControl.draw('cse');
+	  }, true);
+	</script>
+
+</div>
+
+</div>
+</div>

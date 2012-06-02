@@ -1,0 +1,30 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+	<title>Aery32 DevZone</title>
+	<subtitle>Articles about Aery32 development and projects.</subtitle>
+	<link href="http://devzone.aery32.com/atom.xml" rel="self"/>
+	<link href="http://devzone.aery32.com/"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>http://devzone.aery32.com/</id>
+
+	{% for post in site.posts %}
+	<entry>
+		<title>{{ post.title }}</title>
+		<link href="{{ site.url }}{{ post.url }}"/>
+		<updated>{{ post.date | date_to_xmlschema }}</updated>
+		<id>{{ site.url }}{{ post.id }}</id>
+		<author>
+			<name>{{ post.author }}</name>
+			{% if post.author-email %}
+				<email>{{ post.author-email }}</email>
+			{% endif %}
+		</author>
+		<summary>{{ post.summary }}</summary>
+	</entry>
+	{% endfor %}
+
+</feed>
