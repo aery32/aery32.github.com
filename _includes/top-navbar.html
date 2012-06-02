@@ -9,9 +9,11 @@
 	<div class="nav-collapse">
 		<ul class="nav">
 			{% for url in site.urls %}
-			{% assign link = url[1] | regex:/(index\.html|\.html)$/, "" %}
-			<li {% if page.url == link %}class="active"{% endif %}>
-				<a href="{{ link }}">{{ url[0] }}</a>
+			{% capture pageurl %}
+				{{ page.url | remove:".html" | remove: "/index" }}
+			{% endcapture %}
+			<li {% if pageurl == url[1] %}class="active"{% endif %}>
+				<a href="{{ url[1] }}">{{ url[0] }}</a>
 			</li>
 			{% endfor %}
 		</ul>
