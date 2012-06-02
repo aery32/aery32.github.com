@@ -14,5 +14,5 @@ exclude:
 
 # Navigation
 urls:
-- ['Home', '/']
-- ['Archive', '/archive']
+- ['Home', '/', 'home']
+- ['Archive', '/archive', 'th']

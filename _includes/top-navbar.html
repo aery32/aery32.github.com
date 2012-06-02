@@ -9,7 +9,7 @@
 	<div class="nav-collapse">
 		<ul class="nav">
 			{% capture pageurl %}
-				{{ page.url | remove:".html" | remove: "/index" }}
+				{{ page.url | remove: ".html" | remove: "/index" }}
 			{% endcapture %}
 
 			{% if pageurl == "" %}
@@ -18,7 +18,10 @@
 
 			{% for url in site.urls %}
 				<li {% if pageurl == url[1] %}class="active"{% endif %}>
-					<a href="{{ url[1] }}">{{ url[0] }}</a>
+					<a href="{{ url[1] }}">
+						{% if url[2] %}<i class="icon-{{ url[2] }} icon-white"></i>{% endif %}
+						{{ url[0] }}
+					</a>
 				</li>
 			{% endfor %}
 		</ul>

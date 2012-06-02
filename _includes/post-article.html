@@ -2,6 +2,23 @@
 {% assign content = post.content %}
 {% endif %}
 
+<div class="row" style="margin-bottom: 10px;">
+	<div class="span3">
+		{% if post.previous.url %}
+		<a href="{{ post.previous.url }}">&laquo; {{ post.previous.title }}</a>
+		{% else %}
+		&nbsp;
+		{% endif %}
+	</div>
+	<div class="span3" style="text-align: right">
+		{% if post.next.url %}
+		<a href="{{ post.next.url }}">{{ post.next.title }} &raquo;</a>
+		{% else %}
+		&nbsp;
+		{% endif %}
+	</div>
+</div>
+
 <div class="hfeed">
 <article itemscope itemtype="http://schema.org/BlogPosting" class="post-article hentry">
 	<header>
@@ -75,4 +92,7 @@
 		</div>
 	</footer>
 </article>
+
+{% include disqus.html %}
+
 </div>
