@@ -18,7 +18,7 @@ tweet-text: "Go ahead with AVR Toolchain version 3.4.0 #aery32devzone"
 summary: "Atmel released a new version of its AVR Toolchain (3.4.0) with AVR Studio 6 a week or two ago. However, the standalone installer of this toolchain has not been released yet. This post shows how to go ahead with the new version that is included in Studio 6"
 ---
 
-<span class="label label-info">Update!</span>There was a mistake in the designation of Atmel Studio 6. Since version 6, Atmel AVR Studio is called as Atmel Studio.
+<span class="label label-info">Update!</span> There was a mistake in the designation of Atmel Studio 6. Since version 6, Atmel AVR Studio is called as Atmel Studio.
 
 Atmel released a new version of its AVR Toolchain (3.4.0) with AVR Studio 6 a week or two ago. However, the standalone installer of this toolchain has not been released yet. This post shows how to go ahead with the new version that is included in the Studio 6. First let's check what version of the toolchain we have already installed. This can be done via command line. Assuming that you are on Windows, press Win-R and type `cmd`, then press enter.
 
