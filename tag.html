@@ -1,20 +1,21 @@
 ---
 layout: default
-title: Posts' tags list
-description:
+title: Posts' tags
+description: All entries posted in Aery32 DevZone listed in according their tags
 ---
 
 <div class="container">
 <div class="row">
 
-	<div class="span6">	
+	<div class="span6">
+	<h1>Posts' tags</h1>
+
+	<dl class="posts-list hfeed">
 	{% for tag in site.tags %}
-		<h1 name="#{{ tag[0] }}">{{ tag[0] }}</h1>
-		<ul class="posts-list hfeed">
-			{% for post in tag[1] %}
+		<dt name="#{{ tag[0] }}">{{ tag[0] }}</dt>
+		{% for post in tag[1] %}
 			{% include post-list-item.html %}
-			{% endfor %}
-		</ul>
+		{% endfor %}
 	{% endfor %}
 	</div>
 	

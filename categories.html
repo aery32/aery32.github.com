@@ -1,0 +1,24 @@
+---
+layout: default
+title: Posts' categories
+description: All entries posted in Aery32 DevZone listed in their categories
+---
+
+<div class="container">
+<div class="row">
+
+	<div class="span6">	
+	<h1>Posts' categories</h1>
+
+	<dl class="posts-list hfeed">
+	{% for cat in site.categories %}
+		<dt name="#{{ cat[0] }}">{{ cat[0] }}</dt>
+		{% for post in cat[1] %}
+			{% include post-list-item.html %}
+		{% endfor %}
+	{% endfor %}
+	</dl>
+	</div>
+	
+</div>
+</div>

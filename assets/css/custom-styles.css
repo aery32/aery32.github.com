@@ -63,10 +63,8 @@
 	text-align: center;
 }
 
-.feed {
-	margin-left: 3px;
-	padding: 0 0 0 19px;
-	background: url("/assets/feed-icon-14x14.png") no-repeat 0 50%;
+dl.posts-list address {
+	display: none;
 }
 
 body { background: #fff url("/images/aery32-background.png"); }
