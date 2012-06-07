@@ -31,7 +31,7 @@ Humm... but how?
 
 Well first you have to [download and install Git](http://git-scm.com/downloads). There are installers for Mac OS X, Windows, Linux and Solaris. Pick up the one for your operating system &ndash; Linux users can also install Git via package managers such as apt-get and yum. If you are unsure what to select on each screen during the installation, check the [installation instructions from GitHub](https://help.github.com/articles/set-up-git#platform-windows). Be sure to click "*Not sure what to pick on each screen?*" to see screenshots. It's also recommended to configure your Git settings after the installation as instructed in GitHub.
 
-Now we are ready to use Git. In Windows we will use Git Bash. You can find this from your Start menu, or you can open it via Windows Explorer (press Win-E for quick access). Let's open it via Windows Explorer. Browse to `My Documents` and create a new folder called `Workspace`. Then right click that folder and select *Git Bash Here*. Git Bash command line window opens. Now type the command
+Now we are ready to use Git. In Windows we will use Git Bash. You can find this from your Start menu, or you can open it via Windows Explorer (press Win-E for quick access). Let's open it via Windows Explorer. Browse to `My Documents` and create a new folder called `Workspace`. Then right click that folder and select *Git Bash Here*. Git Bash's command line window opens. Now type the command
 
     git clone git://github.com/aery32/aery32.git
 
