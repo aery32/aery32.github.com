@@ -26,7 +26,7 @@ Sometimes it happens and you have accidently erased the DFU Bootloader from your
 
 ## Reprogramming the Bootloader is not the simplest task
 
-You need these
+You will need these:
 
 - [Ubuntu Hardy Heron](http://releases.ubuntu.com/8.04/) &ndash; as fas as I know the `avr32program` works only on Ubuntu and only in this version
 - [AVR UC3 Software Framework 1.7.0](http://www.atmel.com/Images/AVR-UC3-SoftwareFramework-1.7.0.zip) &ndash; this is where the Bootloader binaries can be found
