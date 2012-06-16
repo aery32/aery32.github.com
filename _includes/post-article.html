@@ -28,8 +28,10 @@
 		<span class="pull-right">
 			{% if post.level == "beginner" %}
 			<span class="label label-success">beginner</span>
-			{% else %}
+			{% elsif post.level == "advanced" %}
 			<span class="label label-warning">advanced</span>
+			{% elsif post.level == "guru" %}
+			<span class="label label-inverse">guru</span>
 			{% endif %}
 		</span>
 		</h1>
