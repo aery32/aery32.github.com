@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to reprogram the DFU Bootloader for UC3 chips"
-description: ""
+description: "Sometimes it happens and you have accidently erased the DFU Bootloader from your board. This is how to get it back."
 author: "Kim Blomqvist"
 author-email:
 
@@ -66,6 +66,6 @@ Otherwise, if you are on VirtualBox you have to do all the steps manually, becau
 
 	cat program_at32uc3a-isp-1.0.3.sh
 
-<span class="label label-important">Important!</span> After reprogramming the Bootloader of the Aery32 Development board, you have to reconfigure the fuses for DFU switch. In Windows this can be done by calling `make batchisp-update-userdata`.
+<span class="label label-important">Important!</span> After reprogramming the Bootloader of the Aery32 Development board, you have to reprogram the user page for DFU switch. In Windows this can be done by calling `make batchisp-update-userdata`.
 
 &#10065;
