@@ -35,7 +35,7 @@ Now we are ready to use Git. In Windows we will use Git Bash. You can find this 
 
     git clone git://github.com/aery32/aery32.git
 
-When done you have a new directory called `aery32` under your workspace. That's it, you are now ready to work under that directory &ndash; open `src/main.c` to start programming.
+When done you have a new directory called `aery32` under your workspace. That's it, you are now ready to work under that directory &ndash; open `main.c` to start programming.
 
 <span class="label label-info">Tip!</span> If you want to git clone Aery32 Framework into some other directory than `aery32` you can append the clone command with the desired directory name:
 
