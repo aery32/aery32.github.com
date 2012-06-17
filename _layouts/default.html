@@ -11,6 +11,13 @@
 	{% endif %}
 	<meta name="description" content="{{ page.description }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		@font-face { font-family: 'Oxygen';
+		src: local("Oxygen"), url("/assets/oxygen-fonts/Oxygen-Regular/Oxygen.ttf") format("truetype"); }
+		@font-face { font-family: 'OxygenMono';
+		src: local("OxygenMono"), url("/assets/oxygen-fonts/Monospace/OxygenMono-Regular.ttf") format("truetype"); }
+	</style>
 	<link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
 	<style type="text/css">
 		body {
@@ -20,6 +27,8 @@
 		.sidebar-nav {
 			padding: 9px 0;
 		}
+		body, p { font-family: Oxygen; }
+		code, pre { font-family: OxygenMono; }
 	</style>
 	<link href="/assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="/assets/google-code-prettify/prettify.css" rel="stylesheet">
