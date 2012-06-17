@@ -14,9 +14,17 @@
 
 	<style type="text/css">
 		@font-face { font-family: 'Oxygen';
-		src: local("Oxygen"), url("/assets/oxygen-fonts/Oxygen-Regular/Oxygen.ttf") format("truetype"); }
+			src: url('/assets/oxygen-fontfacekit/Oxygen.eot');
+			src: local('Oxygen'), url('/assets/oxygen-fontfacekit/Oxygen-webfont.woff') format('woff'),
+				url('/assets/oxygen-fontfacekit/Oxygen-webfont.ttf') format('truetype'),
+				url('/assets/oxygen-fontfacekit/Oxygen-webfont.svg') format('svg');
+		}
 		@font-face { font-family: 'OxygenMono';
-		src: local("OxygenMono"), url("/assets/oxygen-fonts/Monospace/OxygenMono-Regular.ttf") format("truetype"); }
+			src: url('/assets/oxygen-mono-fontfacekit/OxygenMono-Regular.eot');
+			src: local('Oxygen'), url('/assets/oxygen-mono-fontfacekit/OxygenMono-Regular-webfont.woff') format('woff'),
+				url('/assets/oxygen-mono-fontfacekit/OxygenMono-Regular-webfont.ttf') format('truetype'),
+				url('/assets/oxygen-mono-fontfacekit/OxygenMono-Regular-webfont.svg') format('svg');
+		}
 	</style>
 	<link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
 	<style type="text/css">
