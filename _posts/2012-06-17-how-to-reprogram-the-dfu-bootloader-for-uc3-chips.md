@@ -38,7 +38,7 @@ When you have logged in Hardy Heron change to the root
 
 	sudo su
 
-and add `deb http://distribute.atmel.no/tools/avr32/release/ubuntu/ hardy main` to the sources.list. You can edit the sources.list file through nano for example
+and add `deb http://distribute.atmel.no/tools/avr32/release/ubuntu hardy main` to the sources.list. You can edit the sources.list file through nano for example
 
 	nano /etc/apt/sources.list
 
@@ -54,9 +54,9 @@ Now download the UC3 Software Framework 1.7.0
 	wget http://www.atmel.com/Images/AVR-UC3-SoftwareFramework-1.7.0.zip
 	unzip AVR-UC3-SoftwareFramework-1.7.0.zip
 
-The Bootloader binaries (for UC3A) can be found from the `1.7.0-AT32UC3/SERVICES/USB/CLASS/DFU/EXAMPLES/ISP/AT32UC3A/Releases/` directory. For Aery32 Development board I chose 1.0.3. Its newer version than what comes wiht the board (UC3A1128 chips are shipped with version 1.0.2).
+The Bootloader binaries (for UC3A) can be found from the `1.7.0-AT32UC3/SERVICES/USB/CLASS/DFU/EXAMPLES/ISP/AT32UC3A/Releases/` directory. For Aery32 Development board I chose 1.0.3. Its newer than what comes with the board (UC3As are shipped with the version 1.0.2).
 
-Connect the AVR Dragon to the board via JTAG interface. If you are on native Linux you can run the shell script that performs all the steps for you
+Connect the AVR Dragon to the board via JTAG interface. If you are on native Linux, you can run the shell script that performs all the steps for you
 
 	cd AT32UC3A-ISP-1.0.3/
 	chmod u+x program_at32uc3a-isp-1.0.3.sh
