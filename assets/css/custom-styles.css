@@ -66,5 +66,8 @@
 dl.posts-list address {
 	display: none;
 }
+.post-list .published {
+	font-family: OxygenMonoRegular;
+}
 
 body { background: #fff url("/images/aery32-background.png"); }
