@@ -69,7 +69,7 @@ for(;;) {
 
 First nothing seems to happen. Then suddenly the text appears and scrolls nicely from right to left &ndash; mission accomplished \o/ Ooops... but what happens now? Now there are text also in the second row. To understand this, you have to understand where's the display's home in its DDRAM. When the entry mode is incremental and shift, the display's home is at the top right side of the DDRAM, and that's the place where the first written character will appear.
 
-![NHD‐0220](/images/nhd-0220_ddram.png "NHD‐0220DZW‐AG5 jumper selection for SPI")
+![NHD‐0220 DDRAM table](/images/nhd-0220_ddram.png "NHD‐0220 DDRAM table")
 
 To see charachters sooner we have to fill this hidden buffer before hand. We also have to take care of setting the DDRAM pointer to point back to the first index (home) just before it's about to change the row. So let's introduce a new function for this
 
