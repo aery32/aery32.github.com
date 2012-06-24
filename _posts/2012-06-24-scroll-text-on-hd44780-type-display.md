@@ -107,7 +107,7 @@ Now we can use this in the main loop. Try it with different offsets to see how i
 
 <pre class="prettyprint lang-c">
 for(;;) {
-	display_scrolleft(buf, len, 0x40, 19);
+	display_scrolleft(buf, len, 0x40, 20);
 	aery_delay_ms(200);
 }
 </pre>
