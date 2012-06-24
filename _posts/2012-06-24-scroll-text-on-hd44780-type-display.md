@@ -18,7 +18,7 @@ tweet-text: "Scroll text on HD44780 type display #aery32devzone"
 summary: "Every now and then it's fun to play with displays &ndash; this time scrolling the text to infinity"
 ---
 
-<iframe src="http://www.youtube.com/embed/54DsvyTVbbk" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%" allowfullscreen></iframe>
+<iframe src="http://www.youtube.com/embed/54DsvyTVbbk?rel=0;showinfo=0;wmode=transparent;theme=light;color=white;autohide=0" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%" allowfullscreen></iframe>
 
 Every now and then it's fun to play with displays. This time I was curious to scroll text to infinity, see the video above. To get started let's copy the [HD44780 example code](https://raw.github.com/aery32/aery32/master/examples/displays/hd44780.c) over <code>main.c</code>. This example code works on SPI bus, as it has been descibed in previous post, [Using HD44780 type two row OLED display via SPI bus](http://devzone.aery32.com/2012/05/27/using-hd44780-type-two-row-oled-display-via-spi-bus/). To make the display scroll from right to left, we have change its entry mode to <code>HD44780_EMODE_INCRNSHIFT</code>. It's also good idea to disable the cursor from blinking. With these changes the display initialization sequence should look like this
 
