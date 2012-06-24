@@ -15,7 +15,7 @@ level: beginner
 
 tweet-text: "Scroll text on HD44780 type display #aery32devzone"
 
-summary: "Every now and then it's fun to play with displays &ndash; this time scrolling the text to infinity"
+summary: "Every now and then it's fun to play with displays &ndash; this time scrolling text to infinity"
 ---
 
 <div style="position:relative;padding-bottom: 56.25%;height:0;margin-bottom:20px;">
@@ -71,7 +71,7 @@ First nothing seems to happen. Then suddenly the text appears and scrolls nicely
 
 ![NHD‐0220](/images/nhd-0220_ddram.png "NHD‐0220DZW‐AG5 jumper selection for SPI")
 
-To see charachters sooner we have to fill this hidden buffer before hand. We also have to take care to set DDRAM pointer to point home just before it's about to change the row. So let's introduce a new function for this
+To see charachters sooner we have to fill this hidden buffer before hand. We also have to take care of setting the DDRAM pointer to point back to the first index (home) just before it's about to change the row. So let's introduce a new function for this
 
 <pre class="prettyprint lang-c">
 void
