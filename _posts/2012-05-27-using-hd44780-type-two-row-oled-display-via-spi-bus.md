@@ -7,7 +7,7 @@ author-email:
 
 tags:
 - spi
-- displays
+- hd44780
 
 categories:
 - article
