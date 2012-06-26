@@ -22,7 +22,7 @@ summary: "Every now and then it's fun to play with displays &ndash; this time sc
 <iframe src="http://www.youtube.com/embed/54DsvyTVbbk?showinfo=0;wmode=transparent;theme=light;color=white;autohide=0" style="position:absolute;height:100%;width:100%;top:0;left:0;" frameborder="0"></iframe>
 </div>
 
-Every now and then it's fun to play with displays. This time I was curious to scroll text to infinity, see the video above. To get started let's copy the [HD44780 example code](https://raw.github.com/aery32/aery32/master/examples/displays/hd44780.c) over <code>main.c</code>. This example code works on SPI bus, as it has been descibed in previous post, [Using HD44780 type two row OLED display via SPI bus](http://devzone.aery32.com/2012/05/27/using-hd44780-type-two-row-oled-display-via-spi-bus/). To make the display scroll from right to left, we have change its entry mode to <code>HD44780_EMODE_INCRNSHIFT</code>. It's also good idea to disable the cursor from blinking. With these changes the display initialization sequence should look like this
+Every now and then it's fun to play with displays. This time I was curious to scroll text to infinity, see the video above. To get started let's copy the [HD44780 example code](https://raw.github.com/aery32/aery32/master/examples/displays/hd44780.c) over <code>main.c</code>. This example code works on SPI bus, as it has been described in previous post, [Using HD44780 type two row OLED display via SPI bus](http://devzone.aery32.com/2012/05/27/using-hd44780-type-two-row-oled-display-via-spi-bus/). To make the display scroll from right to left, we have change its entry mode to <code>HD44780_EMODE_INCRNSHIFT</code>. It's also good idea to disable the cursor from blinking. With these changes the display initialization sequence should look like this
 
 <pre class="prettyprint lang-c">
 // Display initialization sequence
@@ -56,7 +56,7 @@ For <code>strlen()</code> we need to add <code>&lt;string.h&gt;</code> to our in
 #include &lt;string.h&gt;
 </pre>
 
-Next remove the greeting message below the line where the LED has been switched on. Then edit the main loop, upload the program your Aery32 board and see what happens.
+Next remove the greeting message below the line where the LED has been switched on. Then edit the main loop, upload the program to your Aery32 board and see what happens.
 
 <pre class="prettyprint lang-c">
 for(;;) {
@@ -71,7 +71,7 @@ First nothing seems to happen. Then suddenly the text appears and scrolls nicely
 
 ![NHD‐0220 DDRAM table](/images/nhd-0220_ddram.png "NHD‐0220 DDRAM table")
 
-To see charachters sooner we have to fill this hidden buffer before hand. We also have to take care of setting the DDRAM pointer to point back to the first index (home) just before it's about to change the row. So let's introduce a new function for this
+To see characters sooner we have to fill this hidden buffer before hand. We also have to take care of setting the DDRAM pointer to point back to the first index (home) just before it's about to change the row. So let's introduce a new function for this
 
 <pre class="prettyprint lang-c">
 void
