@@ -22,7 +22,10 @@
 }
 
 .post-article h2 {
-	margin: 20px 0 5px;
+	margin: 25px 0 5px;
+}
+.post-article h3 {
+	margin: 15px 0 5px;
 }
 .post-article footer {
 	background-color: #F8F8F8;
