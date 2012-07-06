@@ -29,7 +29,7 @@
 	border-top: 1px solid #DDD;
 	border-bottom: 1px solid #DDD;
 	padding: 5px;
-	margin-bottom: 20px;
+	margin: 40px 0 20px;
 }
 .post-article addr, .post-article address {
 	display: inline;
