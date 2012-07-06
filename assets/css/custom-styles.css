@@ -63,8 +63,8 @@
 	text-align: center;
 }
 
-dl.posts-list address {
-	display: none;
-}
+dl.posts-list address {	display: none; }
+dl.posts-list dt { margin: 15px 0 0; }
+dl.posts-list .published { font-family: OxygenMonoRegular; }
 
 body { background: #fff url("/images/aery32-background.png"); }

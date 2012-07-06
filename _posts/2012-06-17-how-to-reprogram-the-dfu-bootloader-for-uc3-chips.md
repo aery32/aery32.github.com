@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to reprogram the DFU Bootloader for UC3 chips"
-description: "Sometimes it happens and you have accidently erased the DFU Bootloader from your board. This is how to get it back."
+description: "Sometimes it happens that you have accidently erased the DFU Bootloader from your board. This is how to get it back."
 author: "Kim Blomqvist"
 author-email:
 
@@ -17,12 +17,12 @@ level: guru
 
 tweet-text: "How to reprogram the DFU Bootloader for UC3 chips #aery32devzone"
 
-summary: "Sometimes it happens and you have accidently erased the DFU Bootloader from your board; or either you want to change the Bootloader to the previous version or update to the newer one. This article describes how to do that"
+summary: "Sometimes it happens that you have accidently erased the DFU Bootloader from your board; or either you want to change the Bootloader to the previous version or update to the newer one. This article describes how to do that"
 ---
 
 <img class="pull-right" itemprop="image" src="http://devzone.aery32.com/images/reprogramming_bootloader_of_aery32.png" alt="AVR Dragon connected to Aery32">
 
-Sometimes it happens and you have accidently erased the DFU Bootloader from your board; or either you want to change the Bootloader to the previous version or update to the newer one. [AVR32784](http://www.atmel.com/Images/doc7745.pdf) describes the UC3 DFU Bootloader and how to reprogram it. The document mentions the `avr32program` command line tool that can be used to do the job. However, it is not obvious where to get that. Neither it has been delivered with the standalone AVR Toolchain nor with the latest Atmel Studio 6. Though, Studio 6 includes a new tool called `atprogram`, it is not clear if it can be used for reprogramming the Bootloader. If someone knows better, please leave a comment.
+Sometimes it happens that you have accidently erased the DFU Bootloader from your board; or either you want to change the Bootloader to the previous version or update to the newer one. [AVR32784](http://www.atmel.com/Images/doc7745.pdf) describes the UC3 DFU Bootloader and how to reprogram it. The document mentions the `avr32program` command line tool that can be used to do the job. However, it is not obvious where to get that. Neither it has been delivered with the standalone AVR Toolchain nor with the latest Atmel Studio 6. Though, Studio 6 includes a new tool called `atprogram`, it is not clear if it can be used for reprogramming the Bootloader. If someone knows better, please leave a comment.
 
 ## Reprogramming the Bootloader is not the simplest task
 
@@ -34,20 +34,20 @@ You will need these:
 
 The easiest way to install Ubuntu Hardy Heron is most probably using virtualization software, for example Oracle's [VirtualBox](https://www.virtualbox.org/).
 
-When you have logged in Hardy Heron change to the root
+When you have logged in Hardy Heron change to the root:
 
 	sudo su
 
-and add `deb http://distribute.atmel.no/tools/avr32/release/ubuntu hardy main` to the sources.list. You can edit the sources.list file through nano for example
+and add `deb http://distribute.atmel.no/tools/avr32/release/ubuntu hardy main` to the `sources.list`. You can edit the `sources.list` file through nano:
 
 	nano /etc/apt/sources.list
 
-After then install `avr32program` and `avr32-gnu-toolchain`
+After then install `avr32program` and `avr32-gnu-toolchain`:
 
 	apt-get update
 	apt-get install avr32program avr32-gnu-toolchain
 
-Now download the UC3 Software Framework 1.7.0
+Now download the UC3 Software Framework 1.7.0:
 
 	mkdir Downloads
 	cd Downloads
@@ -62,9 +62,7 @@ Connect the AVR Dragon to the board via JTAG interface. If you are on native Lin
 	chmod u+x program_at32uc3a-isp-1.0.3.sh
 	./program_at32uc3a-isp-1.0.3.sh
 
-Otherwise, if you are on VirtualBox you have to do all the steps manually, because VirtualBox keeps detaching AVR Dragon from the VM after every task that has been sent for it. You can reattach the Dragon to the VM by right clicking the USB cable icon from the lower right hand side bar. For steps check inside the `program_at32uc3a-isp-1.0.3.sh`
-
-	cat program_at32uc3a-isp-1.0.3.sh
+Otherwise, if you are on VirtualBox you have to do all the steps manually, because VirtualBox detaches AVR Dragon from it after every accomplished USB task. To reattach the Dragon to the VM, right click the USB cable icon from the lower right hand side bar and run the next command from `program_at32uc3a-isp-1.0.3.sh` file.
 
 <span class="label label-important">Important!</span> After reprogramming the Bootloader of the Aery32 Development board, you have to reprogram the user page for DFU switch. In Windows this can be done by calling `make batchisp-update-userdata`.
 
