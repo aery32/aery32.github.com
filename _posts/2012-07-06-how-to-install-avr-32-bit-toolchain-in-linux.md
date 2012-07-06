@@ -33,18 +33,22 @@ Go to the Atmel's website for [Atmel AVR Toolchain 3.4.0 for Linux](http://www.a
 
 If you have a 64-bit Linux, you may like to download the 64-bit version of the Toolchain. However, the 32-bit Toolchain works as well with the 64-bit Linux.
 
+### Step 2. Unzip the downloads to your installation directory
+
 I assume you downloaded the files under the `~/Download` directory. Change to that directory and untar/unzip the files there.
 
     $ cd ~/Download
     $ untar -xvzf avr32-gnu-toolchain-3.4.0.332-linux.any.x86.tar.gz
     $ unzip avr-headers.zip
 
-Now the installation is just as easy as moving the files and updating the PATH environment variable. First let's move the files to the directory we like to store them (the installation directory). I like to keep these files under `~/avr32-tools`.
+The installation is just as easy as moving the files and updating the PATH environment variable. First let's move the files to the directory we like to store them (the installation directory). I like to keep these files under `~/avr32-tools`.
 
     $ mv avr32-gnu-toolchain-linux_x86 $HOME/avr32-tools
     $ mv avr-headers/avr32 $HOME/avr32-tools/avr32/include
 
-Then update the PATH
+### Step 3. Set PATH
+
+Now update the PATH
 
     $ export PATH=$PATH:$HOME/avr32-tools/bin
 
@@ -58,7 +62,7 @@ and test that the avr32-gcc is accessible by checking its version
 
 To complete the installation, you most probably want to export the new PATH variable from your `.bash_profile`, `.zshrc`, etc. So append the file accordingly with the export statement given above.
 
-### Step 2. Compile with avr32-gcc
+## Compile with the avr32-gcc
 
 Write a small program that sets PA00 pin high and save it to `main.c` file.
 
