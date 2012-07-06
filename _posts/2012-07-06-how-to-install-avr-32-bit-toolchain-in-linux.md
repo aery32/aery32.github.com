@@ -15,14 +15,14 @@ level: beginner
 
 tweet-text: "How to install AVR 32-bit Toolchain in Linux #aery32devzone"
 
-summary: "There are quite amount of confusion how to install AVR Toolchain in Linux and how to use it standalone without IDE. To make this process easier I decided to describe the installation process step by step"
+summary: "There are a quite amount of confusion how to install AVR Toolchain in Linux and how to use it standalone without IDE. To make this process easier I decided to describe the installation process step by step"
 ---
 
-There are quite amount of confusion how to install AVR Toolchain in Linux and how to use it standalone without IDE (integrated development environment). This short article describes, step by step from scratch, how to install the toolchain and compile the *.c source* file to *ihex binary*.
+There are a quite amount of confusion how to install AVR Toolchain in Linux and how to use it standalone without IDE (integrated development environment). This short article describes, step by step from scratch, how to install the toolchain and compile the *.c source* file to *ihex binary*.
 
 ## Installation
 
-For AVR32, there are two choises to install AVR Toolchain. These are the installation from the binaries that can be downloaded from the Atmel's website, or the installation from sources with [AVR32 Toolchain Builder](https://github.com/jsnyder/avr32-toolchain). This article defines the installation process with the precompiled binaries from Atmel.
+For AVR32, there are two choices to install AVR Toolchain. These are the installation from the binaries that can be downloaded from the Atmel's website, or the installation from sources with [AVR32 Toolchain Builder](https://github.com/jsnyder/avr32-toolchain). This article defines the installation process with the precompiled binaries from Atmel.
 
 ### Step 1. Download the files
 
@@ -31,7 +31,7 @@ Go to the Atmel's website for [Atmel AVR Toolchain 3.4.0 for Linux](http://www.a
 - Atmel AVR 32-bit Toolchain 3.4.0 - Linux 32-bit
 - Atmel AVR 8-bit and 32-bit Toolchain 3.2.3 - Header Files
 
-If you have 64-bit Linux you may like to download 64-bit version of the toolchain.
+If you have a 64-bit Linux, you may like to download the 64-bit version of the Toolchain. However, the 32-bit Toolchain works as well with the 64-bit Linux.
 
 I assume you downloaded the files under the `~/Download` directory. Change to that directory and untar/unzip the files there.
 
@@ -90,4 +90,4 @@ To see how much space the compiled program takes, use avr32-size
     text    data     bss     dec     hex filename
        0    6022       0    6022    1786 main.hex
 
-I hope this helped you to get started in Linux. &#10065;
+I hope this helped you to get started in Linux. If you have any queries, please leave a comment. &#10065;
