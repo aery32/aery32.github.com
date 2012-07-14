@@ -22,12 +22,14 @@ summary: "Every now and then it's fun to play with displays &ndash; this time sc
 <iframe src="http://www.youtube.com/embed/54DsvyTVbbk?showinfo=0;wmode=transparent;theme=light;color=white;autohide=0" style="position:absolute;height:100%;width:100%;top:0;left:0;" frameborder="0"></iframe>
 </div>
 
-Every now and then it's fun to play with displays. This time I was curious to scroll text to infinity, see the video above. To get started let's copy the [HD44780 example code](https://raw.github.com/aery32/aery32/master/examples/displays/hd44780.c) over <code>main.c</code>. This example code works on SPI bus, as it has been described in previous post, [Using HD44780 type two row OLED display via SPI bus](http://devzone.aery32.com/2012/05/27/using-hd44780-type-two-row-oled-display-via-spi-bus/). To make the display scroll from right to left, we have change its entry mode to <code>HD44780_EMODE_INCRNSHIFT</code>. It's also good idea to disable the cursor from blinking. With these changes the display initialization sequence should look like this
+<span class="label label-info">Update!</span> Article updated to be consistent with the framework version 0.2.
+
+Every now and then it's fun to play with displays. This time I was curious to scroll text to infinity, see the video above. To get started let's copy the [HD44780 example code](https://raw.github.com/aery32/aery32/master/examples/displays/hd44780.c) over <code>main.cpp</code>. This example code works on SPI bus, as it has been described in previous post, [Using HD44780 type two row OLED display via SPI bus](http://devzone.aery32.com/2012/05/27/using-hd44780-type-two-row-oled-display-via-spi-bus/). To make the display scroll from right to left, we have change its entry mode to <code>HD44780_EMODE_INCRNSHIFT</code>. It's also good idea to disable the cursor from blinking. With these changes the display initialization sequence should look like this
 
 <pre class="prettyprint lang-c">
-// Display initialization sequence
-aery_delay_ms(2);
-display_instruct(HD44780_DL4BIT|HD44780_FONTBL_WE1);
+/* Display initialization sequence */
+delay_ms(2);
+display_instruct(HD44780_DL8BIT|HD44780_FONTBL_WE1);
 display_instruct(HD44780_DISPLAY_OFF);
 display_instruct(HD44780_CLEAR_DISPLAY);
 display_instruct(HD44780_RETURN_HOME);
@@ -38,8 +40,7 @@ display_instruct(HD44780_DISPLAY_ON);
 Now let's define the string what we want to scroll on the display. This piece of code comes at the top of <code>main()</code> function.
 
 <pre class="prettyprint lang-c">
-int
-main(void)
+int main(void)
 {
 	char buf[] = "Find this demo from devzone.aery32.com... ";
 	int len = strlen(buf);
@@ -48,12 +49,11 @@ main(void)
 For <code>strlen()</code> we need to add <code>&lt;string.h&gt;</code> to our includes.
 
 <pre class="prettyprint lang-c">
-#include &lt;stdbool.h&gt;
+#include &lt;string.h&gt;
+#include "board.h"
 #include &lt;aery32/gpio.h&gt;
 #include &lt;aery32/spi.h&gt;
-#include "board.h"
 #include &lt;aery32/delay.h&gt;
-#include &lt;string.h&gt;
 </pre>
 
 Next remove the greeting message below the line where the LED has been switched on. Then edit the main loop, upload the program to your Aery32 board and see what happens.
@@ -62,7 +62,7 @@ Next remove the greeting message below the line where the LED has been switched 
 for(;;) {
 	for (int i = 0; i &lt; len; i++) {
 		display_putc(buf[i]);
-		aery_delay_ms(200);		
+		delay_ms(200);		
 	}
 }
 </pre>
@@ -74,8 +74,7 @@ First nothing seems to happen. Then suddenly the text appears and scrolls nicely
 To see characters sooner we have to fill this hidden buffer before hand. We also have to take care of setting the DDRAM pointer to point back to the first index (home) just before it's about to change the row. So let's introduce a new function for this
 
 <pre class="prettyprint lang-c">
-void
-display_scrolleft(const char *buf, int n, uint8_t rowlen, uint8_t offset)
+void display_scrolleft(const char *buf, int n, uint8_t rowlen, uint8_t offset)
 {
 	static bool initialized = false;
 	static int i = 0, j = 0;
@@ -108,7 +107,7 @@ Now we can use this in the main loop. Try it with different offsets to see how i
 <pre class="prettyprint lang-c">
 for(;;) {
 	display_scrolleft(buf, len, 0x40, 20);
-	aery_delay_ms(200);
+	delay_ms(200);
 }
 </pre>
 
