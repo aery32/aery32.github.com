@@ -64,7 +64,7 @@ To complete the installation, you most probably want to export the new PATH vari
 
 ## Compile with the avr32-gcc
 
-Write a small program that sets PA00 pin high and save it to `main.c` file.
+Write a small program that sets PA00 pin high and save it to `main.c`.
 
 <pre class="prettyprint lang-c">
 #include &lt;avr32/io.h&gt;
