@@ -14,7 +14,7 @@ categories:
 
 level: beginner
 
-tweet-text: "Scroll text on HD44780 type display #aery32devzone"
+tweet-text: "Batchisp for UC3 chips demystified #aery32devzone"
 
 summary: "With Batchisp you can program the UC3 chips via USB DFU Bootloader.  In this case the USB DFU Bootloader shipped within the UC3 chips, allows you to program the chip with your own program by just using the USB interface&ndash;no need for an external programmer hardware"
 ---
