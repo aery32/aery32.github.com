@@ -5,7 +5,7 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
 	<title>Aery32 DevZone</title>
-	<subtitle>Articles about Aery32 development and projects.</subtitle>
+	<subtitle>Articles conserning the AVR32 chips and tools and the development on Aery32 Software Framework.</subtitle>
 	<link href="http://devzone.aery32.com/atom.xml" rel="self"/>
 	<link href="http://devzone.aery32.com/"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
