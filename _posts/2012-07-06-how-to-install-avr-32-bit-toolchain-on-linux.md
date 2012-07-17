@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to install AVR 32-bit Toolchain in Linux"
+title: "How to install AVR 32-bit Toolchain on Linux"
 description: "Step by step instructions to install AVR 32-bit Toolchain"
 author: "Kim Blomqvist"
 author-email:
@@ -13,12 +13,12 @@ categories:
 
 level: beginner
 
-tweet-text: "How to install AVR 32-bit Toolchain in Linux #aery32devzone"
+tweet-text: "How to install AVR 32-bit Toolchain on Linux #aery32devzone"
 
-summary: "There are a quite amount of confusion how to install AVR Toolchain in Linux and how to use it standalone without IDE. To make this process easier I decided to describe the installation process step by step"
+summary: "There are a quite amount of confusion how to install AVR Toolchain on Linux and how to use it standalone without IDE. To make this process easier I decided to describe the installation process step by step"
 ---
 
-There are a quite amount of confusion how to install AVR Toolchain in Linux and how to use it standalone without IDE (integrated development environment). This short article describes, step by step from scratch, how to install the toolchain and compile the *.c source* file to *ihex binary*.
+There are a quite amount of confusion how to install AVR Toolchain on Linux and how to use it standalone without IDE (integrated development environment). This short article describes, step by step from scratch, how to install the toolchain and compile the *.c source* file to *ihex binary*.
 
 ## Installation
 
@@ -94,4 +94,4 @@ To see how much space the compiled program takes, use avr32-size
     text    data     bss     dec     hex filename
        0    6022       0    6022    1786 main.hex
 
-I hope this helped you to get started in Linux. If you have any queries, please leave a comment. &#10065;
+I hope this helped you to get started on Linux. If you have any queries, please leave a comment. &#10065;
