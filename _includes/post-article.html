@@ -24,6 +24,15 @@
 	<header>
 		<h1 itemprop="name" class="entry-title">
 		<a href="{{ site.url }}{{ post.url }}" rel="bookmark">{{ post.title }}</a>
+		</h1>
+
+		<!-- Socials -->
+		<div class="post-socials">
+		<g:plusone size="medium" href="{{ site.url }}{{ post.url }}"></g:plusone>
+		<a href="https://twitter.com/share" class="twitter-share-button"
+			data-url="{{ site.url }}{{ post.url }}"
+			data-text="{% if post.tweet-text %}{{ post.tweet-text }}{% else %}{{ post.title }}{% endif %}">Tweet</a>
+
 		<!-- Post level -->
 		<span class="pull-right">
 			{% if post.level == "beginner" %}
@@ -34,16 +43,8 @@
 			<span class="label label-inverse">guru</span>
 			{% endif %}
 		</span>
-		</h1>
 
-		<!-- Socials -->
-		<div class="post-socials">
-		<g:plusone size="medium" href="{{ site.url }}{{ post.url }}"></g:plusone>
-		<a href="https://twitter.com/share" class="twitter-share-button"
-			data-url="{{ site.url }}{{ post.url }}"
-			data-text="{% if post.tweet-text %}{{ post.tweet-text }}{% else %}{{ post.title }}{% endif %}">Tweet</a>
 		</div>
-
 	</header>
 
 	<section class="entry-content">{{ content }}</section>
