@@ -38,7 +38,7 @@ If you have a 64-bit Linux, you may like to download the 64-bit version of the T
 I assume you downloaded the files under the `~/Download` directory. Change to that directory and untar/unzip the files there.
 
     $ cd ~/Download
-    $ untar -xvzf avr32-gnu-toolchain-3.4.0.332-linux.any.x86.tar.gz
+    $ tar -xvzf avr32-gnu-toolchain-3.4.0.332-linux.any.x86.tar.gz
     $ unzip avr-headers.zip
 
 The installation is just as easy as moving the files and updating the PATH environment variable. First let's move the files to the directory we like to store them (the installation directory). I like to keep these files under `~/avr32-tools`.
