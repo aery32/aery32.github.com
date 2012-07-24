@@ -147,11 +147,11 @@ The fusebits.hex file will now read as
 	:1000100001010100000000000000010101010101D7 
 	:00000001FF
 
-How to interprete and represent this in hexadecimal form is left for you as a homework (I don't know the answer;). Maybe someone will comment on this below. However, if you managed to alter the hex appropriately, the fuse bits can be reprogramed with this command
+How to interpret and represent this in hexadecimal form is left for you as a homework (I don't know the answer;). Maybe someone will comment on this below. However, if you managed to alter the hex appropriately, the fuse bits can be reprogrammed with this command
 
 	%DFU% -operation memory configuration loadbuffer fusebits.hex program verify
 
-## Troubleshooting 
+## Troubleshooting
 
 ### 'batchisp' is not recognized as an internal or external command
 
