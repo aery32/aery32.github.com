@@ -16,10 +16,10 @@ level: advanced
 
 tweet-text: "Performance testing for fun with AVR32_COUNT system register #aery32devzone"
 
-summary: "The cycle counting register, AVR32_COUNT, within the AVR32 UC3 microprosessors can be used for naive performance testing of functions' execution time"
+summary: "The cycle counting register, AVR32_COUNT, within the AVR32 UC3 microcontrollers can be used for naive performance testing of functions' execution time"
 ---
 
-The cycle counting register, AVR32_COUNT, within the AVR32 UC3 microprosessors can be used for naive performance testing of functions' execution time. Just reset the AVR32_COUNT before the function call to be tested and read the count value right after the function returns, like this
+The cycle counting register, AVR32_COUNT, within the AVR32 UC3 microcontrollers can be used for naive performance testing of functions' execution time. Just reset the AVR32_COUNT before the function call to be tested and read the count value right after the function returns, like this
 
 <pre class="prettyprint lang-c">
 #include &lt;avr32/io.h&gt;
