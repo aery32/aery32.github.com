@@ -22,7 +22,7 @@ summary: "Every now and then it's fun to play with displays &ndash; this time sc
 <iframe src="http://www.youtube.com/embed/54DsvyTVbbk?showinfo=0;wmode=transparent;theme=light;color=white;autohide=0" style="position:absolute;height:100%;width:100%;top:0;left:0;" frameborder="0"></iframe>
 </div>
 
-<span class="label label-info">Update!</span> Article updated to be consistent with the framework version 0.2.
+<span class="label label-info">Update!</span> Article updated to be consistent with the framework version 0.4.1.
 
 Every now and then it's fun to play with displays. This time I was curious to scroll text to infinity, see the video above. To get started let's copy the [HD44780 example code](https://raw.github.com/aery32/aery32/master/examples/displays/hd44780.c) over <code>main.cpp</code>. This example code works on SPI bus, as it has been described in previous post, [Using HD44780 type two row OLED display via SPI bus](http://devzone.aery32.com/2012/05/27/using-hd44780-type-two-row-oled-display-via-spi-bus/). To make the display scroll from right to left, we have change its entry mode to <code>HD44780_EMODE_INCRNSHIFT</code>. It's also good idea to disable the cursor from blinking. With these changes the display initialization sequence should look like this
 
@@ -46,22 +46,12 @@ int main(void)
 	int len = strlen(buf);
 </pre>
 
-For <code>strlen()</code> we need to add <code>&lt;string.h&gt;</code> to our includes.
-
-<pre class="prettyprint lang-c">
-#include &lt;string.h&gt;
-#include "board.h"
-#include &lt;aery32/gpio.h&gt;
-#include &lt;aery32/spi.h&gt;
-#include &lt;aery32/delay.h&gt;
-</pre>
-
 Next remove the greeting message below the line where the LED has been switched on. Then edit the main loop, upload the program to your Aery32 board and see what happens.
 
 <pre class="prettyprint lang-c">
 for(;;) {
 	for (int i = 0; i &lt; len; i++) {
-		display_putc(buf[i]);
+		display_putchar(buf[i]);
 		delay_ms(200);		
 	}
 }
@@ -83,7 +73,7 @@ void display_scrolleft(const char *buf, int n, uint8_t rowlen, uint8_t offset)
 	if (!initialized) {
 		j = rowlen - offset;
 		for (int k = j; k &gt; 0; k--) {
-			display_putc(buf[i++]);
+			display_putchar(buf[i++]);
 			if (i == n) i = 0;
 		}
 		initialized = true;
@@ -97,7 +87,7 @@ void display_scrolleft(const char *buf, int n, uint8_t rowlen, uint8_t offset)
 		j = 0;
 	}
 
-	display_putc(buf[i++]);
+	display_putchar(buf[i++]);
 	j++;
 }
 </pre>
