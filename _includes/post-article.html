@@ -35,6 +35,9 @@
 
 		<!-- Post level -->
 		<span class="pull-right">
+			{% if post.label %}
+			<span class="label">{{ post.label }}</span>
+			{% endif %}
 			{% if post.level == "beginner" %}
 			<span class="label label-success">beginner</span>
 			{% elsif post.level == "advanced" %}
